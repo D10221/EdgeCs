@@ -20,8 +20,6 @@ namespace EgdeCs
     {       
         public static async Task Start(Action<object> callback)
         {
-           // var script = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) +"\\..\\..\\"+"script.cs");
-
             var func = Edge.Func(@"return require('../../../script')");
          
             dynamic result = await func(null);
